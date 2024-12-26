@@ -24,7 +24,10 @@ Carry = AB + ACin + BCin
 
 ![image](https://github.com/naavaneetha/FULL_ADDER_SUBTRACTOR/assets/154305477/0f30ba51-5ffb-4198-845f-18e054f675e7)
 
-**Figure -1 FULL ADDER**
+**FULL ADDER Truthtable**
+
+![image](https://github.com/user-attachments/assets/e1c802c3-2561-45d7-af5e-034533f2a033)
+
 
 **Full Subtractor**
 
@@ -36,16 +39,21 @@ Diff = A ⊕ B ⊕ Bin
 
 Borrow out = A'Bin + A'B + BBin
 
-**Truthtable**
+**FULL SUBTRACTOR Truthtable**
 
-![image](https://github.com/user-attachments/assets/0cdf9cfc-be0d-43ab-b196-46600871b585)
+![image](https://github.com/user-attachments/assets/85df76d9-d158-4fff-8f95-119d5fbc12ee)
+
 
 **Procedure**
 
 1.Type the program in Quartus software.
+
 2.Compile and run the program.
+
 3.Generate the RTL schematic and save the logic diagram.
+
 4.Create nodes for inputs and outputs to generate the timing diagram.
+
 5.For different input combinations generate the timing diagram.
 
 **Program:**
@@ -53,6 +61,8 @@ Borrow out = A'Bin + A'B + BBin
 /* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. 
 Developed by: Jisha Bossne SJ RegisterNumber: 24900154
 */
+
+FULL ADDER
 ```
 module fa(A,B,Cin,sum,carry);
 input A,B,Cin;
@@ -61,6 +71,7 @@ assign sum=(A^B^Cin);
 assign carry=(A&B)|((A^B)&Cin);
 endmodule
 ```
+FULL SUBTRACTOR
 ```
 module fs(A,B,Bin,diff,borr);
 input A,B,Bin;
